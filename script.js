@@ -25,6 +25,7 @@ async function constructForms(){
             // Create form
             form = document.createElement('form')
             form.id = formId;
+            form.name = subject;
 
             // Create label and imput for each form field and append to form
             fields.forEach((field, i) => {
@@ -53,18 +54,24 @@ async function constructForms(){
             //Create form button
             formBtn = document.createElement('input')
             formBtn.setAttribute('type', 'submit')
+            formBtn.dataset.form = subject;
             formBtn.value = 'Preencher'
 
             form.appendChild(formBtn)
             
             // Inserts form at DOM
             formContainerDOM.appendChild(form)
-            
-            // Add eventListener to btn
-            formBtn.addEventListener('click', (event) => {
-                event.preventDefault();
-            })
 
+        })
+        
+        const formBtns = document.querySelectorAll('[type="submit"')
+
+        formBtns.forEach((btn) => {
+            btn.addEventListener('click', (event) => {
+                event.preventDefault();
+                console.log(btn.dataset.form)
+                fillText(btn.dataset.form)
+            })
         })
 
     } catch(error) {
@@ -72,17 +79,16 @@ async function constructForms(){
     }
 }
 
-function fillText(){
+async function fillText(subject){
+    const response = await fetch("./template/" + subject + ".txt")
+    const text = await response.text()
+    const template = text;
+    
+    console.log(template)
 
-    async function getText(){
-        const response = await fetch("./template/Incentivo à qualificação.txt")
-        const text = await response.text()
-        const template = text;
-        
-        // console.log(template)
-    }
-
-    getText();
+    console.log(document.forms["Incentivo à qualificação"][0].value)
+    console.log(document.forms["Incentivo à qualificação"][1].value)
+    console.log(document.forms["Incentivo à qualificação"][2].value)
 }
 
 constructForms()
