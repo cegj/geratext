@@ -1,0 +1,36 @@
+{
+    "Incentivo à qualificação": {
+        "fields": [
+            "nome",
+            "siape",
+            "cargo"
+        ],
+        "labels": [
+            "Nome completo",
+            "Matrícula SIAPE",
+            "Cargo do servidor"
+        ],
+        "attributes": [
+            {"type": "text", "color": "black"},
+            {"type": "number"},
+            {"type": "text"}
+        ]
+    },
+    "Estágio probatório": {
+        "fields": [
+            "nome",
+            "siape",
+            "cargo"
+        ],
+        "labels": [
+            "Nome completo",
+            "Matrícula SIAPE",
+            "Cargo do servidor"
+        ],
+        "attributes": [
+            {"type": "text", "color": "black"},
+            {"type": "number"},
+            {"type": "text"}
+        ]
+    }
+}
