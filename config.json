@@ -3,17 +3,38 @@
         "fields": [
             "nome",
             "siape",
-            "cargo"
+            "cargo",
+            ["tipo_titulacao"],
+            "nome_titulacao",
+            ["tipo_documentacao"],
+            ["percentual_anterior"],
+            ["relacao_ambiente"],
+            ["percentual"],
+            "data_vigencia"
         ],
         "labels": [
             "Nome completo",
             "Matrícula SIAPE",
-            "Cargo do servidor"
+            "Cargo do servidor",
+            "Tipo de titulação",
+            "Nome da titulação",
+            "Tipo de documentação",
+            "Percentual anterior",
+            "Relação com o ambiente",
+            "Percentual de concessão",
+            "Data de vigência"
         ],
         "attributes": [
-            {"type": "text", "color": "black"},
+            {"type": "text"},
             {"type": "number"},
-            {"type": "text"}
+            {"type": "text"},
+            ["Ensino fundamental", "Ensino médio", "Médio prof. ou técnico", "Graduação", "Especialização", "Mestrado", "Doutorado"],
+            {"type": "text"},
+            ["provisória", "definitiva"],
+            ["10%", "15%", "20%", "25%", "30%", "35%", "50%", "52%", "75%"],
+            ["DIRETA", "INDIRETA"],
+            ["10%", "15%", "20%", "25%", "30%", "35%", "50%", "52%", "75%"],
+            {"type": "date"}
         ]
     },
     "Estágio probatório": {
