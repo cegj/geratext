@@ -31,7 +31,7 @@
             ["Ensino fundamental", "Ensino médio", "Médio prof. ou técnico", "Graduação", "Especialização", "Mestrado", "Doutorado"],
             {"type": "text"},
             ["provisória", "definitiva"],
-            ["10%", "15%", "20%", "25%", "30%", "35%", "50%", "52%", "75%"],
+            ["NÃO", "10%", "15%", "20%", "25%", "30%", "35%", "50%", "52%", "75%"],
             ["DIRETA", "INDIRETA"],
             ["10%", "15%", "20%", "25%", "30%", "35%", "50%", "52%", "75%"],
             {"type": "date"}

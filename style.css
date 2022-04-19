@@ -2,26 +2,88 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0px;
     padding: 0px;
+    background-color: #D0E0F3;
+}
+ul, li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-title {
+    padding-left: 30px;
 }
 
 .subjects.container {
-    background-color: rgb(228, 228, 228);
-    padding: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #212121;
+    color: #ffffff;
+    height: 63.993px;
 }
 
 .subjects.list {
+    display:  flex;
+    align-content: center;
+    gap: 30px;
     list-style: none;
+    height: 100%;
+    padding: 0 30px 0 30px;
+}
+
+.subjects.list li {
     display: flex;
-    gap: 20px;
-    font-size: 1.3rem;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    height: 100%;
+    padding: 0 10px 0 10px;
 }
 
-.form.container {
-    margin: 20px;
+.subjects.list li:hover {
+    background-color: #3B3B3B;
 }
 
-form input, form label {
+
+.main.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form.container, .text.container{
+    background-color: #ffffff;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    margin: 50px;
+    padding: 30px;
+    max-height: fit-content;
+    display: none;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+
+form input, form label, form select {
     display: block;
-    padding: 5px;
     font-size: 1.1rem;
 }
+
+form input, form select {
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+input[type="submit"]{
+    grid-column: 1 / -1;
+}
+
+.text.container {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+

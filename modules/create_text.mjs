@@ -28,6 +28,7 @@ export default async function createText(form,subject){
     textDiv.innerHTML = template;
 
     textContainerDOM.appendChild(textDiv);
+    textContainerDOM.style.display = "block";
 
     console.log(template);
 }

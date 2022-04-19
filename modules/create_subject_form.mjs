@@ -75,6 +75,7 @@ export default function createSubjectForm(event, config){
         
         // Inserts form at DOM
         formContainerDOM.appendChild(form)
+        formContainerDOM.style.display = "block";
 
         
         const submitBtn = form.querySelector('[type="submit"]');
