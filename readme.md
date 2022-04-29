@@ -2,7 +2,7 @@
 
 Geratexto is an web app to fill a template text using a form.
 
-### How it works
+### How does it works
 
 1. Set template texts on *.txt files;
 2. Configure the form parameters (fields and their labels, attributes and/or values) at config.json file;
@@ -17,7 +17,7 @@ You can use as much templates as you need — but you need to create a form for 
 
 #### config.json
 
-The config.json file has the following structure:
+The config.json file is where you configure the forms for each text template. It has the following structure:
 
 ```
 {
@@ -43,9 +43,10 @@ The config.json file has the following structure:
 
 So, as you can see:
 
+- The TEXT TITLE OR SUBJECT needs to be equals to the *.txt template file name (that's how Geratexto matches both);
 - You can create as much fields as you want;
 - The "labels" and "attributes" matches to the "fields" order;
-- Fields setted inside brackets [] area "select" fields and the "attributes" are an array of it's options;
+- Fields setted inside brackets [] area "select" fields and the "attributes" are an array of it's options. To other fields, you need to set the type as an attribute (e.g.: "type":"text");
 - You can set as much attributes as you want, and they are objects with "atribute_name":"atribute_value" format;
 - It's not possible to set attributes to "select" fields (you can set just the values of the options).
 
