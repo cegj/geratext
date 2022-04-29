@@ -1,6 +1,6 @@
 ## Geratexto
 
-Geratexto is a web app to fill an template text with a form.
+Geratexto is an web app to fill a template text using a form.
 
 ### How it works
 
@@ -19,6 +19,7 @@ You can use as much templates as you need — but you need to create a form for 
 
 The config.json file has the following structure:
 
+```
 {
     "TEXT TITLE OR SUBJECT": {
         "fields": [
@@ -38,6 +39,7 @@ The config.json file has the following structure:
         ]
     }
 }
+```
 
 So, as you can see:
 
