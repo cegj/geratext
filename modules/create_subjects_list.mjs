@@ -4,14 +4,21 @@ export default function createSubjectsList(config){
 
     const subjects = Object.keys(config)
 
-    const subjectsListDOM = document.querySelector(".subjects.list")
+    const subjectsListDOM = document.querySelector(".gtxt-subjects-list")
 
     subjects.forEach((subject) => {
-        const subjectItem = document.createElement('li');
-        subjectItem.innerHTML = subject;
-        subjectsListDOM.appendChild(subjectItem);
+        const subjectLi = document.createElement('li');
+        subjectLi.classList.add("nav-item");
+
+        const subjectA = document.createElement('a');
+        subjectA.classList.add('nav-link');
+        subjectA.setAttribute('href', '');
+        subjectA.innerHTML = subject;
+
+        subjectLi.appendChild(subjectA);
+        subjectsListDOM.appendChild(subjectLi);
         
-        subjectItem.addEventListener('click', (event) => {createSubjectForm(event, config)})
+        subjectLi.addEventListener('click', (event) => {createSubjectForm(event, config)})
     })
 
 }
